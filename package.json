@@ -1,0 +1,50 @@
+{
+  "name": "electron-deepl-write",
+  "productName": "electron-deepl-write",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "litongmacos",
+    "email": "litongjava@qq.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "electron": "24.1.2"
+  },
+  "build": {
+    "productName": "deepl-write",
+    "appId": "com.litongjava.deepl.write",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "src/images/logo.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/images/logo.png"
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "src/images/logo.png"
+    }
+  }
+}
